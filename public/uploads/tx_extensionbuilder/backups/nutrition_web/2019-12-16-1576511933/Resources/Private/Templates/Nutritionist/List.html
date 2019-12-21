@@ -1,0 +1,122 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+    <!-- <h1>Listing for Nutritionist</h1>
+
+    <f:flashMessages />
+
+    <table  class="tx_nutritionweb" >
+        <tr>
+            <th><f:translate key="tx_nutritionweb_domain_model_nutritionist.name" /></th>
+            <th><f:translate key="tx_nutritionweb_domain_model_nutritionist.email" /></th>
+            <th><f:translate key="tx_nutritionweb_domain_model_nutritionist.qualification" /></th>
+            <th><f:translate key="tx_nutritionweb_domain_model_nutritionist.ratings" /></th>
+            <th><f:translate key="tx_nutritionweb_domain_model_nutritionist.about" /></th>
+            <th><f:translate key="tx_nutritionweb_domain_model_nutritionist.services" /></th>
+            <th> </th>
+            <th> </th>
+        </tr>
+
+        <f:for each="{nutritionists}" as="nutritionist">
+            <tr>
+                <td><f:link.action action="show" arguments="{nutritionist : nutritionist}">{nutritionist.name}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{nutritionist : nutritionist}">{nutritionist.email}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{nutritionist : nutritionist}">{nutritionist.qualification}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{nutritionist : nutritionist}">{nutritionist.ratings}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{nutritionist : nutritionist}">{nutritionist.about}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{nutritionist : nutritionist}">{nutritionist.services}</f:link.action></td>
+                <td><f:link.action action="edit" arguments="{nutritionist : nutritionist}">Edit</f:link.action></td>
+                <td><f:link.action action="delete" arguments="{nutritionist : nutritionist}">Delete</f:link.action></td>
+            </tr>
+        </f:for>
+    </table> -->
+
+    <div class="jumbotron">
+        <!-- <div class="container">
+            <h2>Nutritionist List</h2>
+            <table class="tx_nutritionweb" >
+                <tr>
+                    <th><f:translate key="tx_nutritionweb_domain_model_nutritionist.name" /></th>
+                    <th><f:translate key="tx_nutritionweb_domain_model_nutritionist.email" /></th>
+                    <th><f:translate key="tx_nutritionweb_domain_model_nutritionist.qualification" /></th>
+                    <th><f:translate key="tx_nutritionweb_domain_model_nutritionist.ratings" /></th>
+                </tr>
+        
+                <f:for each="{nutritionists}" as="nutritionist">
+                    <tr>
+                        <td><f:link.action action="show" arguments="{nutritionist : nutritionist}">{nutritionist.name}</f:link.action></td>
+                        <td><f:link.action action="show" arguments="{nutritionist : nutritionist}">{nutritionist.email}</f:link.action></td>
+                        <td><f:link.action action="show" arguments="{nutritionist : nutritionist}">{nutritionist.qualification}</f:link.action></td>
+                        <td><f:link.action action="show" arguments="{nutritionist : nutritionist}">{nutritionist.ratings}</f:link.action></td>
+                        <td><f:link.action action="edit" arguments="{nutritionist : nutritionist}">Edit</f:link.action></td>
+                        <td><f:link.action action="delete" arguments="{nutritionist : nutritionist}">Delete</f:link.action></td>
+                    </tr>
+                </f:for>
+            </table>
+        </div> -->
+        <h2>Nutritionist List</h2>
+
+        <f:if condition="search">
+            <div class="alert alert-info">
+                Searched for "{search}", found {nutritionists -> f:count()} results
+            </div>
+        </f:if>
+
+        <div class="row">
+            <div class="col-3"> 
+                <f:form action="list" controller="Nutritionist">
+                    <f:form.textfield value="{search}" name="search" placeholder="Search" class="form-control"/>
+                </f:form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3"> 
+               <bold> Name </bold>
+            </div>
+            <div class="col-3"> 
+                <bold> Email </bold>
+            </div>
+            <div class="col-3"> 
+                <bold> Qualification </bold>
+            </div>
+            <div class="col-3"> 
+                <bold> Ratings </bold>
+            </div>
+        </div>
+
+        <f:for each="{nutritionists}" as="nutritionist">
+            <div class="row">
+                <div class="col-3"> 
+                    <f:link.action action="show" arguments="{nutritionist : nutritionist}">{nutritionist.name}</f:link.action>
+                </div>
+                <div class="col-3"> 
+                    {nutritionist.email}
+                </div>
+                <div class="col-3"> 
+                    {nutritionist.qualification}
+                </div>
+                <div class="col-3"> 
+                    {nutritionist.ratings}
+                </div>
+            </div>
+        </f:for>
+
+<div class="col-3">
+                    
+                </div>    </div>
+
+    <f:link.action action="new">New Nutritionist</f:link.action>
+</f:section>
+</html>

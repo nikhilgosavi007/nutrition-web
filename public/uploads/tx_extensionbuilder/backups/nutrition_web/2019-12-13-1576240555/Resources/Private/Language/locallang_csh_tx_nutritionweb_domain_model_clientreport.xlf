@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:nutrition_web/Resources/Private/Language/locallang_csh" date="2019-12-12T23:56:28Z" product-name="nutrition_web">
+		<header/>
+		<body>
+			<trans-unit id="title.description" resname="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="report.description" resname="report.description">
+				<source>report</source>
+			</trans-unit>
+			<trans-unit id="client.description" resname="client.description">
+				<source>client</source>
+			</trans-unit>
+			<trans-unit id="nutritionist.description" resname="nutritionist.description">
+				<source>nutritionist</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

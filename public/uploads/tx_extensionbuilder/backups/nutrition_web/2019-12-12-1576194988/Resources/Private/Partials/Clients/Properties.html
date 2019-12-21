@@ -1,0 +1,68 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<table class="tx-nutrition-web" >
+	<tr>
+		<td>
+			<f:translate key="tx_nutritionweb_domain_model_clients.name" />
+		</td>
+		<td>
+		{clients.name}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_nutritionweb_domain_model_clients.email" />
+		</td>
+		<td>
+		{clients.email}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_nutritionweb_domain_model_clients.age" />
+		</td>
+		<td>
+		{clients.age}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_nutritionweb_domain_model_clients.height" />
+		</td>
+		<td>
+		{clients.height}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_nutritionweb_domain_model_clients.weight" />
+		</td>
+		<td>
+		{clients.weight}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_nutritionweb_domain_model_clients.bloodgroup" />
+		</td>
+		<td>
+		{clients.bloodgroup}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_nutritionweb_domain_model_clients.bmi" />
+		</td>
+		<td>
+		{clients.bmi}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_nutritionweb_domain_model_clients.photo" />
+		</td>
+		<td>
+				<f:image src="{clients.photo.originalResource.publicUrl}" width="200"/>
+		</td>
+	</tr>
+</table>
+</html>

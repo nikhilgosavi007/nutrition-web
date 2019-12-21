@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:nutrition_web/Resources/Private/Language/locallang_csh" date="2019-12-12T23:54:47Z" product-name="nutrition_web">
+		<header/>
+		<body>
+			<trans-unit id="name.description" resname="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="email.description" resname="email.description">
+				<source>email</source>
+			</trans-unit>
+			<trans-unit id="age.description" resname="age.description">
+				<source>age</source>
+			</trans-unit>
+			<trans-unit id="height.description" resname="height.description">
+				<source>height</source>
+			</trans-unit>
+			<trans-unit id="weight.description" resname="weight.description">
+				<source>weight</source>
+			</trans-unit>
+			<trans-unit id="bloodgroup.description" resname="bloodgroup.description">
+				<source>bloodgroup</source>
+			</trans-unit>
+			<trans-unit id="bmi.description" resname="bmi.description">
+				<source>bmi</source>
+			</trans-unit>
+			<trans-unit id="photo.description" resname="photo.description">
+				<source>photo</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:nutrition_web/Resources/Private/Language/locallang" date="2019-12-20T02:28:09Z" product-name="nutrition_web">
+		<header/>
+		<body>
+			<trans-unit id="tx_nutritionweb_domain_model_nutritionist" resname="tx_nutritionweb_domain_model_nutritionist">
+				<source>Nutritionist</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_nutritionist.name" resname="tx_nutritionweb_domain_model_nutritionist.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_nutritionist.email" resname="tx_nutritionweb_domain_model_nutritionist.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_nutritionist.qualification" resname="tx_nutritionweb_domain_model_nutritionist.qualification">
+				<source>Qualification</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_nutritionist.ratings" resname="tx_nutritionweb_domain_model_nutritionist.ratings">
+				<source>Ratings</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_nutritionist.about" resname="tx_nutritionweb_domain_model_nutritionist.about">
+				<source>About</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_nutritionist.services" resname="tx_nutritionweb_domain_model_nutritionist.services">
+				<source>Services</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_nutritionist.image" resname="tx_nutritionweb_domain_model_nutritionist.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_nutritionist.clients" resname="tx_nutritionweb_domain_model_nutritionist.clients">
+				<source>Clients</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_nutritionist.blogs" resname="tx_nutritionweb_domain_model_nutritionist.blogs">
+				<source>Blogs</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_nutritionist.specializations" resname="tx_nutritionweb_domain_model_nutritionist.specializations">
+				<source>Specializations</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_clients" resname="tx_nutritionweb_domain_model_clients">
+				<source>Clients</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_clients.name" resname="tx_nutritionweb_domain_model_clients.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_clients.email" resname="tx_nutritionweb_domain_model_clients.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_clients.age" resname="tx_nutritionweb_domain_model_clients.age">
+				<source>Age</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_clients.height" resname="tx_nutritionweb_domain_model_clients.height">
+				<source>Height</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_clients.weight" resname="tx_nutritionweb_domain_model_clients.weight">
+				<source>Weight</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_clients.bloodgroup" resname="tx_nutritionweb_domain_model_clients.bloodgroup">
+				<source>Bloodgroup</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_clients.bmi" resname="tx_nutritionweb_domain_model_clients.bmi">
+				<source>Bmi</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_clients.photo" resname="tx_nutritionweb_domain_model_clients.photo">
+				<source>Photo</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_blog" resname="tx_nutritionweb_domain_model_blog">
+				<source>Blog</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_blog.title" resname="tx_nutritionweb_domain_model_blog.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_blog.author" resname="tx_nutritionweb_domain_model_blog.author">
+				<source>Author</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_blog.date" resname="tx_nutritionweb_domain_model_blog.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_blog.description" resname="tx_nutritionweb_domain_model_blog.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_blog.article" resname="tx_nutritionweb_domain_model_blog.article">
+				<source>Article</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_blog.image" resname="tx_nutritionweb_domain_model_blog.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_specialization" resname="tx_nutritionweb_domain_model_specialization">
+				<source>Specialization</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_specialization.name" resname="tx_nutritionweb_domain_model_specialization.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_clientreport" resname="tx_nutritionweb_domain_model_clientreport">
+				<source>Client Report</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_clientreport.title" resname="tx_nutritionweb_domain_model_clientreport.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_clientreport.report" resname="tx_nutritionweb_domain_model_clientreport.report">
+				<source>Report</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_clientreport.client" resname="tx_nutritionweb_domain_model_clientreport.client">
+				<source>Client</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_clientreport.nutritionist" resname="tx_nutritionweb_domain_model_clientreport.nutritionist">
+				<source>Nutritionist</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

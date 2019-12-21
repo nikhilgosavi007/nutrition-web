@@ -1,0 +1,60 @@
+base: 'http://nutrition-web.ddev.site/'
+baseVariants:
+  -
+    base: 'http://nutrition-web.ddev.site/'
+    condition: 'getenv("DDEV_PROJECT") == "nutrition-web"'
+errorHandling: {  }
+languages:
+  -
+    title: English
+    enabled: true
+    base: /en/
+    typo3Language: default
+    locale: en_US.UTF-8
+    iso-639-1: en
+    navigationTitle: English
+    hreflang: en-US
+    direction: ltr
+    flag: en-us-gb
+    languageId: '0'
+rootPageId: 6
+routes: {  }
+routeEnhancers:
+  ClientList:
+       type: Extbase
+       extension: NutritionWeb
+       plugin: ClientList
+       defaultController: 'Clients::list'
+       routes:
+         - { _controller: 'Clients::list', routePath: '/' }
+         - { _controller: 'Clients::show', routePath: '/{clients}' }
+         - { _controller: 'Clients::show', routePath: '/{clients}/{back}' }
+       aspects:
+          clients:
+              type: PersistedAliasMapper
+              tableName: 'tx_nutritionweb_domain_model_clients'
+              routeFieldName: 'slug'
+          back:
+              type: StaticValueMapper
+              map:
+                b: 'Baction'
+
+  Nutritionweb:
+    type: Extbase
+    extension: NutritionWeb
+    plugin: Nutritionweb
+    defaultController: 'Nutritionist::list'
+    routes:
+      - { _controller: 'Nutritionist::list', routePath: '/' }
+      - { _controller: 'Nutritionist::show', routePath: '/{nutritionist}' }
+      - { _controller: 'Nutritionist::show', routePath: '/{nutritionist}/{back}' }
+    aspects:
+      clients:
+          type: PersistedAliasMapper
+          tableName: 'tx_nutritionweb_domain_model_nutritionist'
+          routeFieldName: 'slug'
+      back:
+          type: StaticValueMapper
+          map:
+            b: 'Baction'
+

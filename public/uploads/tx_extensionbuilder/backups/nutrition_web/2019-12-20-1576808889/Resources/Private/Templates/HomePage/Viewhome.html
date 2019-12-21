@@ -1,0 +1,39 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+    Login As:
+
+    <div class="row">
+        <div class="col-6">
+            <div class="card" style="width: 18rem;">
+<!--                <img src="..." class="card-img-top" alt="...">-->
+                    Insert client image placeholder here
+                <div class="card-body">
+                    <f:link.page class="btn btn-primary" pageUid="13" additionalParams="{foo: 'bar'}">Select</f:link.page>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card" style="width: 18rem;">
+<!--                <img src="..." class="card-img-top" alt="...">-->
+                    Insert Nutritionist image placeholder here
+                <div class="card-body">
+                    <f:link.page class="btn btn-primary" pageUid="10" additionalParams="{foo: 'bar'}">Select</f:link.page>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</f:section>

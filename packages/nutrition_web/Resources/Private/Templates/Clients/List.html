@@ -1,0 +1,92 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+
+    <f:flashMessages />
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8">
+<!--                <h1>Search Client Record</h1>-->
+<!--                <div class="row" style="margin-bottom: 1rem;background-color: #013859;">-->
+<!--                    Search goes here-->
+<!--                            <f:form action="list" controller="Clients" style="padding: 1rem;">-->
+<!--                                <f:form.textfield value="{search}" name="search" placeholder="Search" class="form-control"/>-->
+<!--                            </f:form>-->
+<!--                </div>-->
+                <f:for each="{clients}" as="clients">
+
+                    <div class="row" style="padding: 1rem;margin-bottom: 1rem;background-color: #e9ecef;">
+                        <div class="col-3">
+                            <f:image src="{clients.photo.originalResource.publicUrl}" width="150" height="150"/>
+                        </div>
+                        <div class="col-9" style="margin-top: 2rem;">
+                            <div class="row">
+                                <div class="col-3">
+                                    Name
+                                </div>
+                                <div class="col-6">
+                                    <f:link.action action="show" arguments="{clients : clients}">{clients.name}</f:link.action>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    Email
+                                </div>
+                                <div class="col-6">
+                                    {clients.email}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    Age
+                                </div>
+                                <div class="col-6">
+                                    {clients.age}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    BMI
+                                </div>
+                                <div class="col-6">
+                                    {clients.bmi}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </f:for>
+            </div>
+            <div class="col-4">
+                <h1>Blogs</h1>
+                <f:for each="{blogs}" as="blog">
+                    <div class="row">
+                        <div class="card" style="width: 18rem;margin-left: 1rem;margin-bottom: 1rem;">
+                            <f:image style="width:auto" src="{blog.image.originalResource.publicUrl}" width="200"/>
+                            <div class="card-body">
+                                <h5 class="card-title">{blog.title}</h5>
+                                <p class="card-text"> Author: {blog.author}</p>
+                                <p class="card-text">  Published on: <f:format.date format="%d. %B %Y">{blog.date}</f:format.date></p>
+                                <f:link.action action="show" controller="Blog" arguments="{blog : blog}">Read more..</f:link.action>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </f:for>
+            </div>
+        </div>
+    </div>
+</f:section>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:nutrition_web/Resources/Private/Language/locallang_csh" date="2019-12-12T23:54:47Z" product-name="nutrition_web">
+		<header/>
+		<body>
+			<trans-unit id="name.description" resname="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="email.description" resname="email.description">
+				<source>email</source>
+			</trans-unit>
+			<trans-unit id="qualification.description" resname="qualification.description">
+				<source>qualification</source>
+			</trans-unit>
+			<trans-unit id="ratings.description" resname="ratings.description">
+				<source>ratings</source>
+			</trans-unit>
+			<trans-unit id="about.description" resname="about.description">
+				<source>about</source>
+			</trans-unit>
+			<trans-unit id="services.description" resname="services.description">
+				<source>services</source>
+			</trans-unit>
+			<trans-unit id="clients.description" resname="clients.description">
+				<source>clients</source>
+			</trans-unit>
+			<trans-unit id="blogs.description" resname="blogs.description">
+				<source>blogs</source>
+			</trans-unit>
+			<trans-unit id="specializations.description" resname="specializations.description">
+				<source>specializations</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

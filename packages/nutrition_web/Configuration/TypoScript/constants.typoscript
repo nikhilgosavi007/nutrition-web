@@ -1,0 +1,15 @@
+
+plugin.tx_nutritionweb_nutritionweb {
+    view {
+        # cat=plugin.tx_nutritionweb_nutritionweb/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:nutrition_web/Resources/Private/Templates/
+        # cat=plugin.tx_nutritionweb_nutritionweb/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:nutrition_web/Resources/Private/Partials/
+        # cat=plugin.tx_nutritionweb_nutritionweb/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:nutrition_web/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_nutritionweb_nutritionweb//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}

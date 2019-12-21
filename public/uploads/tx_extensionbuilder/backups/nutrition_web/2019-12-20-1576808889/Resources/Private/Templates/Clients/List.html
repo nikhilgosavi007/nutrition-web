@@ -1,0 +1,65 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+    <h1>Listing for Clients</h1>
+    <f:flashMessages />
+    <div class="container-fluid">
+        <f:for each="{clients}" as="clients">
+            <div class="row jumbotron">
+                <div class="col-2">
+                    Image here
+                </div>
+                <div class="col-10">
+                    <div class="row">
+                        <div class="col-2">
+                            Name:
+                        </div>
+                        <div class="col-10">
+                            <f:link.action action="show" arguments="{clients : clients}">{clients.name}</f:link.action>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            Email:
+                        </div>
+                        <div class="col-10">
+                            {clients.email}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            Age:
+                        </div>
+                        <div class="col-10">
+                            {clients.age}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            Blood Group:
+                        </div>
+                        <div class="col-10">
+                            {clients.bloodgroup}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </f:for>
+    </div>
+<!--    https://api.adorable.io/avatars/285/abott@adorable.png-->
+
+    <f:link.action action="new">New Clients</f:link.action>
+</f:section>
+</html>
