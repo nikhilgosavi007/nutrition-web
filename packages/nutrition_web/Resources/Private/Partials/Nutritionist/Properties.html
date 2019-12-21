@@ -1,26 +1,26 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
 <div class="container-fluid">
-        <div class="row">
-            <f:image style="display: block;margin: 0 auto;" src="{nutritionist.image.originalResource.publicUrl}" width="200"/>
-        </div>
-        <div class="data-container" style="text-align: center;margin-top: 1rem;">
-            <span style="display: block;"><label style="color: #013859;font-weight: 900;">Name:</label> &nbsp;{nutritionist.name}</span>
-            <span style="display: block;"><label style="color: #013859;font-weight: 900;">Email:</label> &nbsp;{nutritionist.email}</span>
-            <span style="display: block;"><label style="color: #013859;font-weight: 900;">Qualification:</label> &nbsp;{nutritionist.qualification}</span>
-            <span style="display: block;"><label style="color: #013859;font-weight: 900;">Rating:</label> &nbsp;{nutritionist.ratings}</span>
-        </div>
-        <div class="row">
-            <label style="color: #013859;font-weight: 900;">About:</label>
-            <f:format.html>{nutritionist.about}</f:format.html>
-        </div>
-        <div class="row">
-            <label style="color: #013859;font-weight: 900;">Services:</label>
-            <f:format.html>{nutritionist.services}</f:format.html>
-        </div>
-        <div class="row">
-            <f:link.action style="width: 10rem;" class="btn btn-primary" controller="Nutritionist" action="associateclient" arguments="{nutritionist : nutritionist, clients: clients}">Enroll Me</f:link.action>
-        </div>
+    <div class="row">
+        <f:image style="display: block;margin: 0 auto;" src="{nutritionist.image.originalResource.publicUrl}" width="200"/>
+    </div>
+    <div class="data-container" style="text-align: center;margin-top: 1rem;">
+        <span style="display: block;"><label style="color: #013859;font-weight: 900;">Name:</label> &nbsp;{nutritionist.name}</span>
+        <span style="display: block;"><label style="color: #013859;font-weight: 900;">Email:</label> &nbsp;{nutritionist.email}</span>
+        <span style="display: block;"><label style="color: #013859;font-weight: 900;">Qualification:</label> &nbsp;{nutritionist.qualification}</span>
+        <span style="display: block;"><label style="color: #013859;font-weight: 900;">Rating:</label> &nbsp;{nutritionist.ratings}</span>
+    </div>
+    <div class="row">
+        <label style="color: #013859;font-weight: 900;">About:</label>
+        <f:format.html>{nutritionist.about}</f:format.html>
+    </div>
+    <div class="row">
+        <label style="color: #013859;font-weight: 900;">Services:</label>
+        <f:format.html>{nutritionist.services}</f:format.html>
+    </div>
+    <div class="row">
+        <f:link.action style="width: 10rem;" class="btn btn-primary" controller="Nutritionist" action="associateclient" arguments="{nutritionist : nutritionist, clients: clients}">Enroll Me</f:link.action>
+    </div>
 
 </div>
 

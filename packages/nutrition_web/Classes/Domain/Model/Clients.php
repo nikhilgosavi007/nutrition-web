@@ -76,6 +76,20 @@ class Clients extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $photo = null;
 
     /**
+     * about
+     * 
+     * @var string
+     */
+    protected $about = '';
+
+    /**
+     * reason
+     * 
+     * @var string
+     */
+    protected $reason = '';
+
+    /**
      * Returns the name
      * 
      * @return string $name
@@ -241,5 +255,47 @@ class Clients extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setPhoto(\TYPO3\CMS\Extbase\Domain\Model\FileReference $photo)
     {
         $this->photo = $photo;
+    }
+
+    /**
+     * Returns the about
+     * 
+     * @return string $about
+     */
+    public function getAbout()
+    {
+        return $this->about;
+    }
+
+    /**
+     * Sets the about
+     * 
+     * @param string $about
+     * @return void
+     */
+    public function setAbout($about)
+    {
+        $this->about = $about;
+    }
+
+    /**
+     * Returns the reason
+     * 
+     * @return string $reason
+     */
+    public function getReason()
+    {
+        return $this->reason;
+    }
+
+    /**
+     * Sets the reason
+     * 
+     * @param string $reason
+     * @return void
+     */
+    public function setReason($reason)
+    {
+        $this->reason = $reason;
     }
 }

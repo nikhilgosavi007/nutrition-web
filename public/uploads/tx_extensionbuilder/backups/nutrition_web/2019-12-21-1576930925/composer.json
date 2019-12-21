@@ -1,0 +1,28 @@
+{
+    "name": "groupproject/nutrition-web",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nikhil Gosavi",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "GroupProject\\NutritionWeb\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "GroupProject\\NutritionWeb\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "groupproject/nutrition-web": "self.version",
+        "typo3-ter/nutrition-web": "self.version"
+    }
+}

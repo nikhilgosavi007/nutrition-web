@@ -16,14 +16,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'name,email,bloodgroup',
+        'searchFields' => 'name,email,bloodgroup,about,reason',
         'iconfile' => 'EXT:nutrition_web/Resources/Public/Icons/tx_nutritionweb_domain_model_clients.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, email, age, height, weight, bloodgroup, bmi, photo',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, email, age, height, weight, bloodgroup, bmi, photo, about, reason',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, email, age, height, weight, bloodgroup, bmi, photo, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, email, age, height, weight, bloodgroup, bmi, photo, about, reason, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -229,6 +229,42 @@ return [
                 ],
                 $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
             ),
+            
+        ],
+        'about' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:nutrition_web/Resources/Private/Language/locallang_db.xlf:tx_nutritionweb_domain_model_clients.about',
+            'config' => [
+                'type' => 'text',
+                'enableRichtext' => true,
+                'richtextConfiguration' => 'default',
+                'fieldControl' => [
+                    'fullScreenRichtext' => [
+                        'disabled' => false,
+                    ],
+                ],
+                'cols' => 40,
+                'rows' => 15,
+                'eval' => 'trim',
+            ],
+            
+        ],
+        'reason' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:nutrition_web/Resources/Private/Language/locallang_db.xlf:tx_nutritionweb_domain_model_clients.reason',
+            'config' => [
+                'type' => 'text',
+                'enableRichtext' => true,
+                'richtextConfiguration' => 'default',
+                'fieldControl' => [
+                    'fullScreenRichtext' => [
+                        'disabled' => false,
+                    ],
+                ],
+                'cols' => 40,
+                'rows' => 15,
+                'eval' => 'trim',
+            ],
             
         ],
     

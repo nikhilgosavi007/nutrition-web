@@ -63,6 +63,14 @@ class Nutritionist extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $services = '';
 
     /**
+     * image
+     * 
+     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+     */
+    protected $image = null;
+
+    /**
      * clients
      * 
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\GroupProject\NutritionWeb\Domain\Model\Clients>
@@ -82,14 +90,6 @@ class Nutritionist extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\GroupProject\NutritionWeb\Domain\Model\Specialization>
      */
     protected $specializations = null;
-
-    /**
-     * image
-     * 
-     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
-     */
-    protected $image = null;
 
     /**
      * __construct

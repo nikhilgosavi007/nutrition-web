@@ -1,0 +1,52 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<table class="tx-nutrition-web" >
+	<tr>
+		<td>
+			<f:translate key="tx_nutritionweb_domain_model_blog.title" />
+		</td>
+		<td>
+		{blog.title}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_nutritionweb_domain_model_blog.author" />
+		</td>
+		<td>
+		{blog.author}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_nutritionweb_domain_model_blog.date" />
+		</td>
+		<td>
+		{blog.date -> f:format.date()}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_nutritionweb_domain_model_blog.description" />
+		</td>
+		<td>
+		{blog.description}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_nutritionweb_domain_model_blog.article" />
+		</td>
+		<td>
+		{blog.article}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_nutritionweb_domain_model_blog.image" />
+		</td>
+		<td>
+				<f:image src="{blog.image.originalResource.publicUrl}" width="200"/>
+		</td>
+	</tr>
+</table>
+</html>

@@ -5,10 +5,10 @@ This Template is responsible for creating a table of domain objects.
 
 If you modify this template, do not forget to change the overwrite settings
 in /Configuration/ExtensionBuilder/settings.yaml:
-  Resources:
-    Private:
-      Templates:
-        List.html: keep
+Resources:
+Private:
+Templates:
+List.html: keep
 
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
@@ -18,13 +18,13 @@ Otherwise your changes will be overwritten the next time you save the extension 
     <div class="container-fluid">
         <div class="row">
             <div class="col-8">
-<!--                <h1>Search Client Record</h1>-->
-<!--                <div class="row" style="margin-bottom: 1rem;background-color: #013859;">-->
-<!--                    Search goes here-->
-<!--                            <f:form action="list" controller="Clients" style="padding: 1rem;">-->
-<!--                                <f:form.textfield value="{search}" name="search" placeholder="Search" class="form-control"/>-->
-<!--                            </f:form>-->
-<!--                </div>-->
+                <!--                <h1>Search Client Record</h1>-->
+                <!--                <div class="row" style="margin-bottom: 1rem;background-color: #013859;">-->
+                <!--                    Search goes here-->
+                <!--                            <f:form action="list" controller="Clients" style="padding: 1rem;">-->
+                <!--                                <f:form.textfield value="{search}" name="search" placeholder="Search" class="form-control"/>-->
+                <!--                            </f:form>-->
+                <!--                </div>-->
                 <f:for each="{clients}" as="clients">
 
                     <div class="row" style="padding: 1rem;margin-bottom: 1rem;background-color: #e9ecef;">

@@ -224,4 +224,54 @@ class ClientsTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
             $this->subject
         );
     }
+
+    /**
+     * @test
+     */
+    public function getAboutReturnsInitialValueForString()
+    {
+        self::assertSame(
+            '',
+            $this->subject->getAbout()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setAboutForStringSetsAbout()
+    {
+        $this->subject->setAbout('Conceived at T3CON10');
+
+        self::assertAttributeEquals(
+            'Conceived at T3CON10',
+            'about',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getReasonReturnsInitialValueForString()
+    {
+        self::assertSame(
+            '',
+            $this->subject->getReason()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setReasonForStringSetsReason()
+    {
+        $this->subject->setReason('Conceived at T3CON10');
+
+        self::assertAttributeEquals(
+            'Conceived at T3CON10',
+            'reason',
+            $this->subject
+        );
+    }
 }

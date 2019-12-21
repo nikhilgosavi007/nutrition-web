@@ -28,7 +28,9 @@ CREATE TABLE tx_nutritionweb_domain_model_clients (
 	weight int(11) DEFAULT '0' NOT NULL,
 	bloodgroup varchar(255) DEFAULT '' NOT NULL,
 	bmi int(11) DEFAULT '0' NOT NULL,
-	photo int(11) unsigned NOT NULL default '0'
+	photo int(11) unsigned NOT NULL default '0',
+	about text,
+	reason text
 
 );
 

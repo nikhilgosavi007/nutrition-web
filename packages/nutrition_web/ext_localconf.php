@@ -87,13 +87,13 @@ call_user_func(
                 }
            }'
         );
-		$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+        $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
 
-			$iconRegistry->registerIcon(
-				'nutrition_web-plugin-nutritionweb',
-				\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-				['source' => 'EXT:nutrition_web/Resources/Public/Icons/user_plugin_nutritionweb.svg']
-			);
+        $iconRegistry->registerIcon(
+            'nutrition_web-plugin-nutritionweb',
+            \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+            ['source' => 'EXT:nutrition_web/Resources/Public/Icons/user_plugin_nutritionweb.svg']
+        );
 
     }
 );

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="EXT:nutrition_web/Resources/Private/Language/locallang" date="2019-12-20T02:28:09Z" product-name="nutrition_web">
+	<file source-language="en" datatype="plaintext" original="EXT:nutrition_web/Resources/Private/Language/locallang" date="2019-12-21T12:22:05Z" product-name="nutrition_web">
 		<header/>
 		<body>
 			<trans-unit id="tx_nutritionweb_domain_model_nutritionist" resname="tx_nutritionweb_domain_model_nutritionist">
@@ -62,6 +62,12 @@
 			</trans-unit>
 			<trans-unit id="tx_nutritionweb_domain_model_clients.photo" resname="tx_nutritionweb_domain_model_clients.photo">
 				<source>Photo</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_clients.about" resname="tx_nutritionweb_domain_model_clients.about">
+				<source>About</source>
+			</trans-unit>
+			<trans-unit id="tx_nutritionweb_domain_model_clients.reason" resname="tx_nutritionweb_domain_model_clients.reason">
+				<source>Reason</source>
 			</trans-unit>
 			<trans-unit id="tx_nutritionweb_domain_model_blog" resname="tx_nutritionweb_domain_model_blog">
 				<source>Blog</source>
