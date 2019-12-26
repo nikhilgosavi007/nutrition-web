@@ -14,9 +14,10 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 <f:section name="content">
     <f:flashMessages />
+
     <div class="container-fluid">
         <div class="row">
-            <div class="col-4">
+            <div class="col-8">
                 <h1>Search Nutritionists</h1>
                 <div class="row" style="margin-bottom: 1rem;background-color: #013859;">
                     <f:form action="list" controller="Nutritionist" style="padding: 1rem;">
@@ -73,21 +74,6 @@ Otherwise your changes will be overwritten the next time you save the extension 
                             </div>
                         </div>
                     </div>
-                </f:for>
-            </div>
-            <div class="col-4">
-                <h1>Reports</h1>
-                <f:for each="{clientReports}" as="clientReport">
-                    <f:if condition="{clientReport.client.name} == {clients.name}">
-                        <div class="row">
-                            <div class="card" style="width: 18rem;margin-left: 1rem;margin-bottom: 1rem;">
-                                <div class="card-body">
-                                    <h5 class="card-title">{clientReport.title}</h5>
-                                    <p class="card-text">{clientReport.report}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </f:if>
                 </f:for>
             </div>
             <div class="col-4">

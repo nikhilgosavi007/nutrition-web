@@ -65,13 +65,15 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                     {clients.bmi}
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <f:link.action style="width: 10rem;" class="btn btn-primary" controller="ClientReport" action="new" arguments="{nutritionist : nutritionist, clients: clients}">Prescribe</f:link.action>
-                                </div>
-                                <div class="col-6"></div>
-                            </div>
                         </div>
+
+
+                            <div style="position: relative;display: block;text-align: end;width: 100%;">
+                                <f:link.action style="width: 10rem;" class="btn btn-primary" controller="ClientReport" action="new" arguments="{nutritionist : nutritionist, clients: clients}">Prescribe</f:link.action>
+                            </div>
+
+
+
                     </div>
                 </f:for>
             </div>

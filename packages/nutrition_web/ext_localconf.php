@@ -7,6 +7,18 @@ call_user_func(
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'GroupProject.NutritionWeb',
+            'ClientReport',
+            [
+                'ClientReport' => 'list, show, new, create, edit, update, delete'
+            ],
+            // non-cacheable actions
+            [
+                'ClientReport' => 'list, show, new, create, edit, update, delete'
+            ]
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'GroupProject.NutritionWeb',
             'Homepage',
             [
                 'HomePage' => 'viewhome',
@@ -82,6 +94,16 @@ call_user_func(
                             tt_content_defValues {
                                 CType = list
                                 list_type = nutritionweb_homepage
+                            }
+                        }
+
+                        clientreport {
+                            iconIdentifier = nutrition_web-plugin-nutritionweb
+                            title = Client Report Page
+                            description =  Client Report Page
+                            tt_content_defValues {
+                                CType = list
+                                list_type = nutritionweb_clientreport
                             }
                         }
                     }

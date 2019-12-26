@@ -18,6 +18,7 @@ namespace GroupProject\NutritionWeb\Controller;
 class ClientReportController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
 
+
     /**
      * clientReportRepository
      *
@@ -34,6 +35,22 @@ class ClientReportController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
     }
 
     /**
+     * clientsRepository
+     *
+     * @var \GroupProject\NutritionWeb\Domain\Repository\ClientsRepository
+     */
+    protected $clientsRepository = null;
+
+    /**
+     * @param \GroupProject\NutritionWeb\Domain\Repository\ClientsRepository $clientsRepository
+     */
+    public function injectClientsRepository(\GroupProject\NutritionWeb\Domain\Repository\ClientsRepository $clientsRepository)
+    {
+        $this->clientsRepository = $clientsRepository;
+    }
+
+
+    /**
      * action list
      *
      * @return void
@@ -42,6 +59,13 @@ class ClientReportController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
     {
         $clientReports = $this->clientReportRepository->findAll();
         $this->view->assign('clientReports', $clientReports);
+        //var_dump($clientReports); die();
+        $client = $this->clientsRepository->findByUid(10);
+        $query = $this->clientReportRepository->createQuery();
+        $query->contains('client', $client);
+        $individualReports = $query->execute();
+
+        $this->view->assign('abc',  $individualReports);
     }
 
     /**
