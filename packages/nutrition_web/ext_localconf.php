@@ -21,10 +21,12 @@ call_user_func(
             'Clientlist',
             [
                 'Clients' => 'list, show, new, create, edit, update, delete',
+                'ClientReport' => 'list, show, new, create, edit, update, delete'
             ],
             // non-cacheable actions
             [
                 'Clients' => 'list, show, new, create, edit, update, delete',
+                'ClientReport' => 'list, show, new, create, edit, update, delete'
             ]
         );
 

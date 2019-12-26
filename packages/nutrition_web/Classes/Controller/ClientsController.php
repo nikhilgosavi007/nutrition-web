@@ -83,6 +83,7 @@ class ClientsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         $this->view->assign('clients', $clients);
         $blogs = $this->blogRepository->findAll();
         $this->view->assign('blogs', $blogs);
+        $this->view->assign('nutritionist', $nutritionist);
     }
 
     /**

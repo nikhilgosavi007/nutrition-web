@@ -20,7 +20,7 @@ class ClientReportController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
 
     /**
      * clientReportRepository
-     * 
+     *
      * @var \GroupProject\NutritionWeb\Domain\Repository\ClientReportRepository
      */
     protected $clientReportRepository = null;
@@ -35,7 +35,7 @@ class ClientReportController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
 
     /**
      * action list
-     * 
+     *
      * @return void
      */
     public function listAction()
@@ -46,7 +46,7 @@ class ClientReportController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
 
     /**
      * action show
-     * 
+     *
      * @param \GroupProject\NutritionWeb\Domain\Model\ClientReport $clientReport
      * @return void
      */
@@ -57,29 +57,34 @@ class ClientReportController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
 
     /**
      * action new
-     * 
+     *
      * @return void
      */
-    public function newAction()
+    public function newAction(\GroupProject\NutritionWeb\Domain\Model\Nutritionist $nutritionist,\GroupProject\NutritionWeb\Domain\Model\Clients $clients)
     {
+        $this->view->assign('nutritionist',$nutritionist);
+        $this->view->assign('clients',$clients);
     }
 
     /**
      * action create
-     * 
+     *
      * @param \GroupProject\NutritionWeb\Domain\Model\ClientReport $newClientReport
      * @return void
      */
     public function createAction(\GroupProject\NutritionWeb\Domain\Model\ClientReport $newClientReport)
     {
-        $this->addFlashMessage('The object was created. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/typo3cms/extensions/extension_builder/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
+
         $this->clientReportRepository->add($newClientReport);
-        $this->redirect('list');
+        $client = $newClientReport->getClient();
+        $nutritionist = $newClientReport->getNutritionist();
+        $this->addFlashMessage('New presciption submited for '.$client->getName(), '', \TYPO3\CMS\Core\Messaging\AbstractMessage::INFO);
+        $this->redirect('new',NULL,NULL, ['nutritionist' => $nutritionist,'clients'=>$client]);
     }
 
     /**
      * action edit
-     * 
+     *
      * @param \GroupProject\NutritionWeb\Domain\Model\ClientReport $clientReport
      * @ignorevalidation $clientReport
      * @return void
@@ -91,7 +96,7 @@ class ClientReportController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
 
     /**
      * action update
-     * 
+     *
      * @param \GroupProject\NutritionWeb\Domain\Model\ClientReport $clientReport
      * @return void
      */
@@ -104,7 +109,7 @@ class ClientReportController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
 
     /**
      * action delete
-     * 
+     *
      * @param \GroupProject\NutritionWeb\Domain\Model\ClientReport $clientReport
      * @return void
      */

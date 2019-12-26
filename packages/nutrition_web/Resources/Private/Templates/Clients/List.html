@@ -13,11 +13,12 @@ List.html: keep
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="content">
-
+    <h1>Welcome {nutritionist.name}</h1>
     <f:flashMessages />
     <div class="container-fluid">
         <div class="row">
             <div class="col-8">
+                <h1>Your Clients</h1>
                 <!--                <h1>Search Client Record</h1>-->
                 <!--                <div class="row" style="margin-bottom: 1rem;background-color: #013859;">-->
                 <!--                    Search goes here-->
@@ -63,6 +64,12 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                 <div class="col-6">
                                     {clients.bmi}
                                 </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <f:link.action style="width: 10rem;" class="btn btn-primary" controller="ClientReport" action="new" arguments="{nutritionist : nutritionist, clients: clients}">Prescribe</f:link.action>
+                                </div>
+                                <div class="col-6"></div>
                             </div>
                         </div>
                     </div>

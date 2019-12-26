@@ -43,6 +43,21 @@ class NutritionistController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
     protected $clientsRepository = null;
 
     /**
+     * clientReportRepository
+     *
+     * @var \GroupProject\NutritionWeb\Domain\Repository\ClientReportRepository
+     */
+    protected $clientReportRepository = null;
+
+    /**
+     * @param \GroupProject\NutritionWeb\Domain\Repository\ClientReportRepository $clientReportRepository
+     */
+    public function injectClientReportRepository(\GroupProject\NutritionWeb\Domain\Repository\ClientReportRepository $clientReportRepository)
+    {
+        $this->clientReportRepository = $clientReportRepository;
+    }
+
+    /**
      * @param \GroupProject\NutritionWeb\Domain\Repository\NutritionistRepository $nutritionistRepository
      */
     public function injectNutritionistRepository(\GroupProject\NutritionWeb\Domain\Repository\NutritionistRepository $nutritionistRepository)
@@ -77,6 +92,10 @@ class NutritionistController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
         $this->view->assign('nutritionists', $nutritionists);
         $blogs = $this->blogRepository->findAll();
         $this->view->assign('blogs', $blogs);
+        $clients = $this->clientsRepository->findByUid(10);
+        $clientReports = $this->clientReportRepository->findAll();
+        $this->view->assign('clients', $clients);
+        $this->view->assign('clientReports',$clientReports);
     }
 
     /**
@@ -89,7 +108,16 @@ class NutritionistController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
     {
         $this->view->assign('nutritionist', $nutritionist);
         $clients = $this->clientsRepository->findByUid(10);
+        $clientReports = $this->clientReportRepository->findAll();
+        $clientReportsToDisplay = array();
+        foreach ($clientReports as $clientReport) {
+            $client = $clientReport->getClient();
+            if(strcmp($client->getName(), $clients->getName()) == 0){
+                array_push($clientReportsToDisplay,$client);
+            }
+        }
         $this->view->assign('clients', $clients);
+        $this->view->assign('clientReports',$clientReportsToDisplay);
     }
 
     /**
