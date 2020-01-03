@@ -9,10 +9,10 @@
 ############
 page {
     logo {
-        file = EXT:nutrition_web_package/Resources/Public/Images/logo.svg
+        file = EXT:nutrition_web_package/Resources/Public/Images/logo.jpg
         fileInverted = EXT:nutrition_web_package/Resources/Public/Images/logo-inverted.svg
-        height = 52
-        width = 192
+        height = 352
+        width = 492
         alt = Nutrition Web Package
         linktitle = Nutrition Web Package
     }
