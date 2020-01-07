@@ -103,7 +103,7 @@ class ClientReportController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
         $client = $newClientReport->getClient();
         $nutritionist = $newClientReport->getNutritionist();
         $this->addFlashMessage('New presciption submited for '.$client->getName(), '', \TYPO3\CMS\Core\Messaging\AbstractMessage::INFO);
-        $this->redirect('new',NULL,NULL, ['nutritionist' => $nutritionist,'clients'=>$client]);
+       $this->redirect('new',NULL,NULL, ['nutritionist' => $nutritionist,'clients'=>$client]);
     }
 
     /**

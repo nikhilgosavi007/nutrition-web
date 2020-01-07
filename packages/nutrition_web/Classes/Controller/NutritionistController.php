@@ -192,4 +192,9 @@ class NutritionistController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
         $this->nutritionistRepository->update($nutritionist);
         $this->redirect('list');
     }
+    public function dissociateclientAction( Nutritionist $nutritionist, Clients $clients ){
+        $nutritionist->removeClient($clients);
+        $this->nutritionistRepository->update($nutritionist);
+        $this->redirect('list', "Nutritionist","GroupProject.NutritionWeb");
+    }
 }

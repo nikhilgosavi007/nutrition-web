@@ -37,7 +37,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                 <div class="col-3">
                                     Name
                                 </div>
-                                <div class="col-6">
+                                <div class="col-9">
                                     <f:link.action action="show" arguments="{clients : clients}">{clients.name}</f:link.action>
                                 </div>
                             </div>
@@ -45,7 +45,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                 <div class="col-3">
                                     Email
                                 </div>
-                                <div class="col-6">
+                                <div class="col-9">
                                     {clients.email}
                                 </div>
                             </div>
@@ -53,7 +53,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                 <div class="col-3">
                                     Age
                                 </div>
-                                <div class="col-6">
+                                <div class="col-9">
                                     {clients.age}
                                 </div>
                             </div>
@@ -61,12 +61,15 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                 <div class="col-3">
                                     BMI
                                 </div>
-                                <div class="col-6">
+                                <div class="col-9">
                                     {clients.bmi}
                                 </div>
                             </div>
-                        </div>
 
+                        </div>
+                        <div style="position: relative;display: block;text-align: end;width: 100%;">
+                            <f:link.action style="width: 10rem;" class="btn btn-primary" controller="Nutritionist" action="dissociateclient" arguments="{nutritionist : nutritionist, clients: clients}">Unroll Client</f:link.action>
+                        </div>
 
                             <div style="position: relative;display: block;text-align: end;width: 100%;">
                                 <f:link.action style="width: 10rem;" class="btn btn-primary" controller="ClientReport" action="new" arguments="{nutritionist : nutritionist, clients: clients}">Prescribe</f:link.action>

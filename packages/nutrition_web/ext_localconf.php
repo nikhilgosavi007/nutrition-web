@@ -33,12 +33,14 @@ call_user_func(
             'Clientlist',
             [
                 'Clients' => 'list, show, new, create, edit, update, delete',
-                'ClientReport' => 'list, show, new, create, edit, update, delete'
+                'ClientReport' => 'list, show, new, create, edit, update, delete',
+                'Nutritionist' => 'list, show, new, create, edit, update, delete, associateclient, dissociateclient',
             ],
             // non-cacheable actions
             [
                 'Clients' => 'list, show, new, create, edit, update, delete',
-                'ClientReport' => 'list, show, new, create, edit, update, delete'
+                'ClientReport' => 'list, show, new, create, edit, update, delete',
+                'Nutritionist' => 'list, show, new, create, edit, update, delete, associateclient, dissociateclient',
             ]
         );
 
@@ -46,7 +48,7 @@ call_user_func(
             'GroupProject.NutritionWeb',
             'Nutritionweb',
             [
-                'Nutritionist' => 'list, show, new, create, edit, update, delete, associateclient',
+                'Nutritionist' => 'list, show, new, create, edit, update, delete, associateclient, dissociateclient',
                 'Clients' => 'list, show, new, create, edit, update, delete',
                 'Blog' => 'list, show, new, create, edit, update, delete',
                 'Specialization' => 'list, show, new, create, edit, update, delete',
@@ -54,7 +56,7 @@ call_user_func(
             ],
             // non-cacheable actions
             [
-                'Nutritionist' => 'list, show, new, create, edit, update, delete, associateclient',
+                'Nutritionist' => 'list, show, new, create, edit, update, delete, associateclient, dissociateclient',
                 'Clients' => 'list, show, new, create, edit, update, delete',
                 'Blog' => 'list, show, new, create, edit, update, delete',
                 'Specialization' => 'list, show, new, create, edit, update, delete',
