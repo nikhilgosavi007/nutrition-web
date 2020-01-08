@@ -34,42 +34,43 @@ Otherwise your changes will be overwritten the next time you save the extension 
                         </div>
                         <div class="col-9" style="margin-top: 2rem;">
                             <div class="row">
-                                <div class="col-3">
+                                <div class="col-2">
                                     Name
                                 </div>
-                                <div class="col-9">
+                                <div class="col-6">
                                     <f:link.action action="show" arguments="{clients : clients}">{clients.name}</f:link.action>
+                                </div>
+                                <div class="col-2" style="display: block;text-align: end;width: 100%;">
+                                    <f:link.action style="width: 10rem;" class="btn btn-primary" controller="Nutritionist" action="dissociateclient" arguments="{nutritionist : nutritionist, clients: clients}">Disenroll Client</f:link.action>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-3">
+                                <div class="col-2">
                                     Email
                                 </div>
-                                <div class="col-9">
+                                <div class="col-7">
                                     {clients.email}
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-3">
+                                <div class="col-2">
                                     Age
                                 </div>
-                                <div class="col-9">
+                                <div class="col-7">
                                     {clients.age}
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-3">
+                                <div class="col-2">
                                     BMI
                                 </div>
-                                <div class="col-9">
+                                <div class="col-7">
                                     {clients.bmi}
                                 </div>
                             </div>
 
                         </div>
-                        <div style="position: relative;display: block;text-align: end;width: 100%;">
-                            <f:link.action style="width: 10rem;" class="btn btn-primary" controller="Nutritionist" action="dissociateclient" arguments="{nutritionist : nutritionist, clients: clients}">Unroll Client</f:link.action>
-                        </div>
+
 
                             <div style="position: relative;display: block;text-align: end;width: 100%;">
                                 <f:link.action style="width: 10rem;" class="btn btn-primary" controller="ClientReport" action="new" arguments="{nutritionist : nutritionist, clients: clients}">Prescribe</f:link.action>
