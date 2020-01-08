@@ -5,10 +5,10 @@ services:
   db:
     container_name: ddev-${DDEV_SITENAME}-db
     build:
-      context: 'C:\Users\Sudarshan\Development\nutrition-web\nutrition-web\.ddev\.dbimageBuild'
+      context: '/home/nikhil/Development/typo3_projects/nutrition-web/.ddev/.dbimageBuild'
       args:
         BASE_IMAGE: $DDEV_DBIMAGE
-        username: 'sudarshan'
+        username: 'nikhil'
         uid: '1000'
         gid: '1000'
     image: ${DDEV_DBIMAGE}-built
@@ -27,7 +27,7 @@ services:
     user: "$DDEV_UID:$DDEV_GID"
     hostname: nutrition-web-db
     ports:
-      - "192.168.99.100:$DDEV_HOST_DB_PORT:3306"
+      - "127.0.0.1:$DDEV_HOST_DB_PORT:3306"
     labels:
       com.ddev.site-name: ${DDEV_SITENAME}
       com.ddev.platform: ddev
@@ -48,10 +48,10 @@ services:
   web:
     container_name: ddev-${DDEV_SITENAME}-web
     build:
-      context: 'C:\Users\Sudarshan\Development\nutrition-web\nutrition-web\.ddev\.webimageBuild'
+      context: '/home/nikhil/Development/typo3_projects/nutrition-web/.ddev/.webimageBuild'
       args:
         BASE_IMAGE: $DDEV_WEBIMAGE
-        username: 'sudarshan'
+        username: 'nikhil'
         uid: '1000'
         gid: '1000'
     image: ${DDEV_WEBIMAGE}-built
@@ -79,8 +79,8 @@ services:
     
     # ports is list of exposed *container* ports
     ports:
-      - "192.168.99.100:$DDEV_HOST_WEBSERVER_PORT:80"
-      - "192.168.99.100:$DDEV_HOST_HTTPS_PORT:443"
+      - "127.0.0.1:$DDEV_HOST_WEBSERVER_PORT:80"
+      - "127.0.0.1:$DDEV_HOST_HTTPS_PORT:443"
     environment:
       - DOCROOT=$DDEV_DOCROOT
       - DDEV_PHP_VERSION=$DDEV_PHP_VERSION
@@ -89,8 +89,8 @@ services:
       - DDEV_ROUTER_HTTP_PORT=$DDEV_ROUTER_HTTP_PORT
       - DDEV_ROUTER_HTTPS_PORT=$DDEV_ROUTER_HTTPS_PORT
       - DDEV_XDEBUG_ENABLED=$DDEV_XDEBUG_ENABLED
-      - DOCKER_IP=192.168.99.100
-      - HOST_DOCKER_INTERNAL_IP=192.168.99.1
+      - DOCKER_IP=127.0.0.1
+      - HOST_DOCKER_INTERNAL_IP=172.17.0.1
       - DEPLOY_NAME=local
       - VIRTUAL_HOST=$DDEV_HOSTNAME
       - COLUMNS=$COLUMNS
@@ -110,7 +110,7 @@ services:
       com.ddev.app-type: typo3
       com.ddev.approot: $DDEV_APPROOT
 
-    extra_hosts: [ "host.docker.internal:192.168.99.1" ]
+    extra_hosts: [ "host.docker.internal:172.17.0.1" ]
 
     external_links:
     - "ddev-router:nutrition-web.ddev.site"

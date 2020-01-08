@@ -14,11 +14,11 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 <f:section name="content">
     <f:flashMessages />
-
+    <h1>Welcome {clients.name}</h1>
     <div class="container-fluid">
         <div class="row">
             <div class="col-8">
-                <h1>Search Nutritionists</h1>
+                <h3>Search Nutritionists</h3>
                 <div class="row" style="margin-bottom: 1rem;background-color: #013859;">
                     <f:form action="list" controller="Nutritionist" style="padding: 1rem;">
                         <f:form.textfield value="{search}" name="search" placeholder="Search" class="form-control"/>
