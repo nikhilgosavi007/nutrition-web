@@ -190,11 +190,13 @@ class NutritionistController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
     public function associateclientAction( Nutritionist $nutritionist, Clients $clients ){
         $nutritionist->addClient($clients);
         $this->nutritionistRepository->update($nutritionist);
+        $this->addFlashMessage('You are have been enrolled successfully.');
         $this->redirect('list');
     }
     public function dissociateclientAction( Nutritionist $nutritionist, Clients $clients ){
         $nutritionist->removeClient($clients);
         $this->nutritionistRepository->update($nutritionist);
+        $this->addFlashMessage('Client disenrolled successfully.');
         $this->redirect('list', "Nutritionist","GroupProject.NutritionWeb");
     }
 }
