@@ -12,6 +12,7 @@ CREATE TABLE tx_nutritionweb_domain_model_nutritionist (
 	image int(11) unsigned NOT NULL default '0',
 	clients text NOT NULL,
 	blogs text NOT NULL,
+	slug varchar(2048),
 	specializations text NOT NULL
 
 );
@@ -29,6 +30,7 @@ CREATE TABLE tx_nutritionweb_domain_model_clients (
 	bloodgroup varchar(255) DEFAULT '' NOT NULL,
 	bmi int(11) DEFAULT '0' NOT NULL,
 	photo int(11) unsigned NOT NULL default '0',
+	slug varchar(2048),
 	about text,
 	reason text
 

@@ -23,7 +23,7 @@ return [
         'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, email, age, height, weight, bloodgroup, bmi, photo, about, reason',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, email, age, height, weight, bloodgroup, bmi, photo, about, reason, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, slug, email, age, height, weight, bloodgroup, bmi, photo, about, reason, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -125,6 +125,19 @@ return [
                 'eval' => 'trim'
             ],
         ],
+
+        'slug' => [
+            'label' => 'URL Segment',
+            'exclude' => true,
+            'config' => [
+                'type' => 'slug',
+                'generatorOptions' => [
+                    'fields' => ['name']
+                ],
+                'eval' => 'uniqueInSite'
+            ],
+        ],
+
         'email' => [
             'exclude' => true,
             'label' => 'LLL:EXT:nutrition_web/Resources/Private/Language/locallang_db.xlf:tx_nutritionweb_domain_model_clients.email',
@@ -229,7 +242,7 @@ return [
                 ],
                 $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
             ),
-            
+
         ],
         'about' => [
             'exclude' => true,
@@ -247,7 +260,7 @@ return [
                 'rows' => 15,
                 'eval' => 'trim',
             ],
-            
+
         ],
         'reason' => [
             'exclude' => true,
@@ -265,8 +278,8 @@ return [
                 'rows' => 15,
                 'eval' => 'trim',
             ],
-            
+
         ],
-    
+
     ],
 ];

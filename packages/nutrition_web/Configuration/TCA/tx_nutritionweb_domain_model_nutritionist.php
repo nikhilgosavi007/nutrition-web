@@ -23,7 +23,7 @@ return [
         'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, email, qualification, ratings, about, services, image, clients, blogs, specializations',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, email, qualification, ratings, about, services, image, clients, blogs, specializations, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, slug, email, qualification, ratings, about, services, image, clients, blogs, specializations, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -125,6 +125,19 @@ return [
                 'eval' => 'trim,required'
             ],
         ],
+
+        'slug' => [
+            'label' => 'URL Segment',
+            'exclude' => true,
+            'config' => [
+                'type' => 'slug',
+                'generatorOptions' => [
+                    'fields' => ['name']
+                ],
+                'eval' => 'uniqueInSite'
+            ],
+        ],
+
         'email' => [
             'exclude' => true,
             'label' => 'LLL:EXT:nutrition_web/Resources/Private/Language/locallang_db.xlf:tx_nutritionweb_domain_model_nutritionist.email',
@@ -168,7 +181,7 @@ return [
                 'rows' => 15,
                 'eval' => 'trim',
             ],
-            
+
         ],
         'services' => [
             'exclude' => true,
@@ -186,7 +199,7 @@ return [
                 'rows' => 15,
                 'eval' => 'trim',
             ],
-            
+
         ],
         'image' => [
             'exclude' => true,
@@ -238,7 +251,7 @@ return [
                 ],
                 $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
             ),
-            
+
         ],
         'clients' => [
             'exclude' => true,
@@ -318,6 +331,6 @@ return [
             ],
 
         ],
-    
+
     ],
 ];

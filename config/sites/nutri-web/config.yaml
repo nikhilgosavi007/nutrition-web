@@ -38,7 +38,6 @@ routeEnhancers:
               type: StaticValueMapper
               map:
                 b: 'Baction'
-
   Nutritionweb:
     type: Extbase
     extension: NutritionWeb
@@ -49,7 +48,7 @@ routeEnhancers:
       - { _controller: 'Nutritionist::show', routePath: '/{nutritionist}' }
       - { _controller: 'Nutritionist::show', routePath: '/{nutritionist}/{back}' }
     aspects:
-      clients:
+      nutritionist:
           type: PersistedAliasMapper
           tableName: 'tx_nutritionweb_domain_model_nutritionist'
           routeFieldName: 'slug'
