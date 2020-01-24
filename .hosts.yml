@@ -33,7 +33,7 @@
       BE:
         # (`::password-hash::` will trigger a cryptographic password
         # hash being applied to the following clear-text value)
-        installToolPassword: '::df#bg3kdsbfgJFD*HBGdsf'
+        installToolPassword: '::password-hash::df#bg3kdsbfgJFD*HBGdsf'
       SYS:
         # (`::random-value::` will trigger creating a 64 byte random value)
         encryptionKey: '::random-value::'
@@ -49,7 +49,7 @@
           # (`::password-hash::` will trigger a cryptographic password
           # hash being applied to the following clear-text value)
         - set:
-            password: '::df#bg3kdsbfgJFD*HBGdsf'
+            password: '::password-hash::df#bg3kdsbfgJFD*HBGdsf'
           # where: constraints to be matched (which records to modify)
           where:
             username: 'admin'
