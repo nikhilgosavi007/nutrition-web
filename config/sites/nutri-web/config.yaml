@@ -1,4 +1,4 @@
-base: 'http://nutrition-web.ddev.site/'
+base: 'http://707namkp-xw6adrv.project.anyhost.it'
 baseVariants:
   -
     base: 'http://nutrition-web.ddev.site/'

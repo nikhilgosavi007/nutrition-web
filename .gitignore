@@ -8,6 +8,7 @@
 /var/
 /vendor/
 /.idea/
+/.host.yml
 /.ddev/
 .DS_Store
 Thumbs.db
